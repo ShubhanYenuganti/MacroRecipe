@@ -1,50 +1,15 @@
-# Welcome to your Expo app 👋
+# Components
+## Landing Page
+Series of questions to generate a user's target macros for breakfast, lunch, dinner, etc. based on inputted meal splits and to also note any dietary restrictions or allergens that the user may have and their desired prep times.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+## Recipes Page
+After completing landing page, sends a request to a Lambda function endpoint to query [Custom MacroRecipe RAG](https://github.com/ShubhanYenuganti/MacroRecipeLLM). It then displays the results for the user to review. 
 
-1. Install dependencies
+# Screenshots
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Recipes Page
+![Recipes Page Screenshot Breakfast Recommendations](images/Breakfast.png)
+![Recipes Page Screenshot Lunch Recommendations](images/Lunch.png)
+![Recipes Page Screenshot Dinner Recommendations](images/Dinner.png)
+![Recipes Page Screenshot Snacks Recommendations](images/Snack.png)
