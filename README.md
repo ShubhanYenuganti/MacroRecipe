@@ -9,7 +9,4 @@ After completing landing page, sends a request to a Lambda function endpoint to 
 # Screenshots
 
 ### Recipes Page
-![Recipes Page Screenshot Breakfast Recommendations](images/Breakfast.png)
-![Recipes Page Screenshot Lunch Recommendations](images/Lunch.png)
-![Recipes Page Screenshot Dinner Recommendations](images/Dinner.png)
-![Recipes Page Screenshot Snacks Recommendations](images/Snack.png)
+![Recipes Page Screenshot Recommendations](images/Lunch.png)
