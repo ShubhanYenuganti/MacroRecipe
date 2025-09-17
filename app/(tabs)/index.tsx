@@ -1,20 +1,22 @@
+// app/(tabs)/index.tsx
 import React from "react";
 import { SafeAreaView, StatusBar } from "react-native";
+import { useRouter } from "expo-router";
 import Landing from "../../src/Landing";
-import { submitOnboarding } from '../../src/api/onboarding'
+import { onboardingStore } from "../../src/state/onboardingStore"
 
-export default function App() {
+export default function LandingScreen() {
+  const router = useRouter();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#0f172a" }}>
       <StatusBar barStyle="light-content" />
-      <Landing onComplete={async (answers) => {
-        try {
-          const result = await submitOnboarding(answers)
-          console.log("submit Onboarding response:", result);
-        } catch (error) {
-          console.error("submitOnboarding error:", error)
-        }
-      }} />
+      <Landing
+        onComplete={(answers) => {
+          onboardingStore.set(answers);
+          router.push("/results");
+        }}
+      />
     </SafeAreaView>
   );
 }
