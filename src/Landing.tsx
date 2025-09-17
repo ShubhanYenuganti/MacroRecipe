@@ -392,7 +392,6 @@ export default function Landing({ onComplete }: { onComplete?: (a: Answers) => v
         onComplete?.(answers);
         Alert.alert("All set!", "Thanks for sharing ✨", [
             {
-                text: "Continue",
                 onPress: async () => {
                     try {
                         await AsyncStorage.multiRemove([STORAGE_KEY, STORAGE_STEP_KEY]);

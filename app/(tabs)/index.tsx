@@ -1,17 +1,19 @@
 import React from "react";
 import { SafeAreaView, StatusBar } from "react-native";
 import Landing from "../../src/Landing";
-
+import { submitOnboarding } from '../../src/api/onboarding'
 
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#0f172a" }}>
       <StatusBar barStyle="light-content" />
-      <Landing onComplete={(answers) => {
-        // TODO: send answers to backend / global state
-        console.log("Onboarding answers:", answers);
-        // Navigate to your real app (if you use React Navigation or Expo Router)
-        // For demo we just log.
+      <Landing onComplete={async (answers) => {
+        try {
+          const result = await submitOnboarding(answers)
+          console.log("submit Onboarding response:", result);
+        } catch (error) {
+          console.error("submitOnboarding error:", error)
+        }
       }} />
     </SafeAreaView>
   );
